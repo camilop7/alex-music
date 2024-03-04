@@ -11,38 +11,30 @@ html(lang="en")
     // Navbar
     nav.navbar
       div.container
-        h1.logo Artist Name
+        h1.logo Alex Bush
+        label.nav-toggle(for="navbar-toggle")
+          i.fa.fa-bars
+        input#navbar-toggle(type="checkbox")
         ul.nav-links
           li: a(href="#bio") Bio
           li: a(href="#contact") Contact
-          li: a(href="#previous-work") Previous Work
+          li: a(href="#the-composer") The composer
           li: a(href="#community") Community & Events
-          li: a(href="#social-media") Social Media
 
     // Hero Section
     section.hero
-      div.container
-        h1 Welcome to the World of Artist Name
-        // Featured Video
-        div.featured-video
-          // Embed the featured video here
-
-    // Bio Section
-    section#bio.bio
-      div.container
-        h2 Bio
-        // Artist's bio goes here
+      img.hero-image(src="/public/images/alex.jpeg", alt="Hero Image")
 
     // Contact Section
     section#contact.contact
       div.container
-        h2 Contact
+        h2 The writer and composer
         // Contact form goes here
 
     // Previous Work Section
     section#previous-work.previous-work
       div.container
-        h2 Previous Work
+        h2 Contact
         // Display previous work, lyrics, and compositions
 
     // Community & Events Section
@@ -51,14 +43,18 @@ html(lang="en")
         h2 Community & Events
         // Display community and events information
 
-    // Social Media Section
-    section#social-media.social-media
-      div.container
-        h2 Social Media
-        // Links to artist's social media profiles
-
     // Footer
     footer.footer
       div.container
-        // Footer content goes here
-        p &copy; 2024 Artist Name. All rights reserved.
+        // Social media icons
+        div.social-media-icons
+          a(href="https://spotify.com/artist")
+            img(src="/public/images/spotify.svg", alt="Spotify")
+          a(href="https://youtube.com/artist")
+            img(src="youtube-favicon.png", alt="YouTube")
+          a(href="https://instagram.com/artist")
+            img(src="instagram-favicon.png", alt="Instagram")
+          a(href="https://tiktok.com/artist")
+            img(src="tiktok-favicon.png", alt="TikTok")
+        // Copyright notice
+        p &copy; 2024 Miss Alex Bush. All rights reserved.

@@ -43,26 +43,74 @@ p {
   font-size: 24px;
 }
 
-.navbar .nav-links {
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-toggle i {
+  font-size: 24px;
+}
+
+.nav-links {
   list-style: none;
-  display: flex;
+  display: none; /* Hide the links initially */
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 20px;
 }
 
-.navbar .nav-links li {
-  margin-right: 20px;
+.nav-links li {
+  margin-bottom: 10px;
 }
 
-.navbar .nav-links li a {
-  color: #fff;
+.nav-links li a {
+  color: #000000;
   text-decoration: none;
 }
 
+#navbar-toggle:checked + .nav-links {
+  display: flex; /* Display the links when the toggle is checked */
+  flex-direction: column; /* Ensure links are displayed vertically */
+}
+
+@media screen and (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .nav-links li {
+    margin-left: 20px;
+    margin-bottom: 0;
+  }
+}
+
+
 /* Hero Section */
+.hero-image {
+  position: fixed;
+  top: 62px; /* 2px margin from the navbar */
+  left: 0;
+  right: 0;
+  bottom: 2px; /* 2px margin from the footer */
+  margin: auto;
+  z-index: -1; /* Ensure the image stays behind other content */
+  width: 100%; /* Ensure the image covers the entire viewport */
+  height: auto;
+}
+
 .hero {
   background-image: url('path/to/your/image.jpg');
   background-size: cover;
   background-position: center;
-  color: #fff;
+  color: #0d0d0d;
   text-align: center;
   padding: 100px 0;
 }
@@ -103,4 +151,34 @@ p {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  width: 100%; /* Ensure footer covers the width of the screen */
+  position: relative; /* Position footer relative to its containing block */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-icons {
+  margin-bottom: 10px; /* Adjust as needed */
+  text-align: left; /* Align icons to the left */
+}
+
+.social-media-icons a {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons as needed */
+}
+
+.social-media-icons img {
+  width: 24px; /* Reduce the size of the icons */
+  height: auto;
+}
+
+/* Position the copyright notice at the bottom right */
+.footer p {
+  position: absolute;
+  bottom: 6px; /* 6px margin from the bottom */
+  right: 10px; /* Align text to the right */
 }
