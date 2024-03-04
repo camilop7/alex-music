@@ -1,5 +1,64 @@
-extends layout
+link(rel="stylesheet", href="/stylesheets/style.css")
 
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Artist Name
+    link(rel="stylesheet", href="styles.css")
+  body
+    // Navbar
+    nav.navbar
+      div.container
+        h1.logo Artist Name
+        ul.nav-links
+          li: a(href="#bio") Bio
+          li: a(href="#contact") Contact
+          li: a(href="#previous-work") Previous Work
+          li: a(href="#community") Community & Events
+          li: a(href="#social-media") Social Media
+
+    // Hero Section
+    section.hero
+      div.container
+        h1 Welcome to the World of Artist Name
+        // Featured Video
+        div.featured-video
+          // Embed the featured video here
+
+    // Bio Section
+    section#bio.bio
+      div.container
+        h2 Bio
+        // Artist's bio goes here
+
+    // Contact Section
+    section#contact.contact
+      div.container
+        h2 Contact
+        // Contact form goes here
+
+    // Previous Work Section
+    section#previous-work.previous-work
+      div.container
+        h2 Previous Work
+        // Display previous work, lyrics, and compositions
+
+    // Community & Events Section
+    section#community.community
+      div.container
+        h2 Community & Events
+        // Display community and events information
+
+    // Social Media Section
+    section#social-media.social-media
+      div.container
+        h2 Social Media
+        // Links to artist's social media profiles
+
+    // Footer
+    footer.footer
+      div.container
+        // Footer content goes here
+        p &copy; 2024 Artist Name. All rights reserved.
